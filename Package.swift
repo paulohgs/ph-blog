@@ -12,12 +12,16 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(name: "Publish", url: "https://github.com/johnsundell/publish.git", from: "0.8.0")
+        .package(name: "Publish", url: "https://github.com/johnsundell/publish.git", from: "0.8.0"),
+        .package(name: "SplashPublishPlugin", url: "https://github.com/JohnSundell/SplashPublishPlugin", from: "0.1.0")
     ],
     targets: [
         .executableTarget(
             name: "PhBlog",
-            dependencies: ["Publish"]
+            dependencies: [
+                "Publish",
+                "SplashPublishPlugin"
+            ]
         )
     ]
 )
